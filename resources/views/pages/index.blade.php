@@ -70,5 +70,11 @@
         </div>
       </section>
 
+      <br>
+      <section style="text-align:center;">
+          <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Mulai Belanja</a>
+      </section>
+      <br>
+      
 @endsection
     

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<br><br><br><br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -34,6 +35,34 @@
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="phone_contact" class="col-md-4 col-form-label text-md-right">{{ __('Phone Contact') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="phone_contact" type="text" class="form-control{{ $errors->has('phone_contact') ? ' is-invalid' : '' }}" name="phone_contact" value="{{ old('phone_contact') }}" required>
+
+                                @if ($errors->has('phone_contact'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('phone_contact') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="other_contact" class="col-md-4 col-form-label text-md-right">{{ __('Other Contact') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="other_contact" type="text" class="form-control{{ $errors->has('other_contact') ? ' is-invalid' : '' }}" name="other_contact" value="{{ old('other_contact') }}">
+
+                                @if ($errors->has('other_contact'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('other_contact') }}</strong>
                                     </span>
                                 @endif
                             </div>
