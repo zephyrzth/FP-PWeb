@@ -7,7 +7,7 @@
           <div class="container">
             <h1 class="masthead-heading mb-0">Toko Paling Maju</h1>
             <h2 class="masthead-subheading mb-0">Selalu terdepan sampai menutupi jalan</h2>
-            <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+            <a href="#belanja" class="btn btn-primary btn-xl rounded-pill mt-5">Lihat Lebih</a>
           </div>
         </div>
         <div class="bg-circle-1 bg-circle"></div>
@@ -71,7 +71,7 @@
       </section>
 
       <br>
-      <section style="text-align:center;">
+      <section id="belanja" style="text-align:center;">
           <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Mulai Belanja</a>
       </section>
       <br>
