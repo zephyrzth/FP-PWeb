@@ -69,6 +69,20 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="nama_toko" class="col-md-4 col-form-label text-md-right">{{ __('Nama Toko') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="nama_toko" type="text" class="form-control{{ $errors->has('nama_toko') ? ' is-invalid' : '' }}" name="nama_toko" value="{{ old('nama_toko') }}" required>
+
+                                @if ($errors->has('nama_toko'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('nama_toko') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
