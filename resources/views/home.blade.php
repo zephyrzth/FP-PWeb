@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<br><br><br><br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -15,7 +14,30 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="/items/create" class="btn btn-primary">Create Product</a>
+                    @if (count($items) > 0)
+                        <table class="table table-striped">
+                            <tr>
+                                <th>Name</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            @foreach ($items as $item)
+                                <tr>
+                                    <td>{{$item->name}}</td>
+                                    <td><a href="/items/{{$item->id}}/edit" class="btn btn-primary">Edit</a></td>
+                                    <td>
+                                        {!!Form::open(['action' =>['ItemsController@destroy', $item->id], 'method' =>'POST', 'class'=>'float-lg-right'])!!}
+                                        {{Form::hidden('_method', 'DELETE')}}
+                                        {{Form::submit('Delete', ['class'=>'btn btn-danger'])}}
+                                        {!!Form::close()!!}
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </table>
+                    @else
+                        <p>You have no product</p>
+                    @endif
                 </div>
             </div>
         </div>

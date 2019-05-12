@@ -1,68 +1,92 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Title  -->
+    <title>{{ config('app.name') }}</title>
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- Favicon  -->
+    <link rel="icon" href="{{ asset('essence/img/core-img/favicon.ico') }}">
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="{{ asset('essence/css/core-style.css') }}">
 
-    <!-- Bootstrap core CSS -->
-    <link href="{{ asset('template/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <!-- Fonts -->
-    <!--<link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">-->
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <style>
-        html, body {
-            margin:0;
-            padding:0;
-            height:100%;
-        }
-
-        #container {
-            min-height:100%;
-            position:relative;
-        }
-
-        #footer {
-            position:absolute;
-            bottom:0;
-            width:100%;
-        }
-    </style>
-
-    <!-- Custom styles for this template -->
-    <link href="{{ asset('template/css/one-page-wonder.min.css') }}" rel="stylesheet">
 </head>
-<body>
-    <div id="container">
-        @include('inc.navbar')
 
-        @yield('content')
-        
-        <br><br><br><br><br>
-        <!-- Footer -->
-        <footer id="footer" class="py-5 bg-black">
-            <div class="container">
-                <p class="m-0 text-center text-white small">Copyright &copy; Toko Paling Maju 2018</p>
+<body>
+    @include('inc.navbar')
+
+    @yield('content')
+    <br><br>
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer_area clearfix">
+        <div class="container">
+            <div class="row">
+                <!-- CONTACT ADMIN -->
+                <div class="col-12 col-md-30 text-center">
+                    <div class="single_widget_area">
+                        <div class="footer_social_area">
+                            <h2 id="contact" style="color:#FFFFFF"><br><br><br><br><br><br><br>Contact Admin</h2>
+                            <h6 style="color:#FFFFFF">Anargya Widyadhana</h6>
+                            <a href="https://www.facebook.com/anargya.dhana" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/anargyadhana/" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <h6 style="color:#FFFFFF">Arief Prasetyo</h6>
+                            <a href="https://www.facebook.com/tyo.brahmantyo" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <h6 style="color:#FFFFFF">Ramadhan Ilham Irfany</h6>
+                            <a href="https://www.facebook.com/ilham.tsumui" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/rmdhn_ilham/" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- /.container -->
-        </footer>
-    </div>
-  
-      <!-- Bootstrap core JavaScript -->
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+            <div class="row align-items-end">
+                <!-- ABOUT US -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area">
+                        <div class="footer_heading mb-30">
+                        <br>
+                        <h3 id="aboutus" style="color:#FFFFFF">About Us</h3>
+                        <p style="color:#FFFFFF">Web ini dibuat oleh mahasiswa Informatika ITS atas nama Anargya Widyadhana, Arief Prasetyo, dan Ramadhan Ilham Irfany untuk memenuhi Final Project yang diberikan oleh bapak Abdul Munif, S.Kom., M.Sc..</p>
+                        <br><br><br><br><br><br><br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-12 text-center">
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="{{ asset('essence/js/jquery/jquery-2.2.4.min.js') }}"></script>
+    <!-- Popper js -->
+    <script src="{{ asset('essence/js/popper.min.js') }}"></script>
+    <!-- Bootstrap js -->
+    <script src="{{ asset('essence/js/bootstrap.min.js') }}"></script>
+    <!-- Plugins js -->
+    <script src="{{ asset('essence/js/plugins.js') }}"></script>
+    <!-- Classy Nav js -->
+    <script src="{{ asset('essence/js/classy-nav.min.js') }}"></script>
+    <!-- Active js -->
+    <script src="{{ asset('essence/js/active.js') }}"></script>
+
 </body>
 </html>
